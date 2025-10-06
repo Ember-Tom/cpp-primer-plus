@@ -1,4 +1,6 @@
 // getinfo.cpp -- input and output
+// 展示信息输入cin,它也是对象
+
 
 #include <iostream>
 

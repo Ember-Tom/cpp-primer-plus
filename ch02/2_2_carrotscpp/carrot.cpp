@@ -1,5 +1,6 @@
 // carrots.cpp -- food processing program
 // uses and displays a variable
+// 展示cout的使用，cout是对象
 
 #include <iostream> 
 

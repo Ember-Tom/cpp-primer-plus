@@ -1,4 +1,7 @@
 // sqrt.cpp -- using the sqrt() function
+// 展示库函数的头文件引入与相关函数使用
+// area 面积；地区；地方；
+// side 边
 
 #include <iostream>
 #include <cmath>   // 一些老编译器该使用 math.h
