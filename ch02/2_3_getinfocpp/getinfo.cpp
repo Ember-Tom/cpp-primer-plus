@@ -1,5 +1,5 @@
 // getinfo.cpp -- input and output
-// 展示信息输入cin,它也是对象
+// 展示信息输入cin,它也是类，面向对象
 
 
 #include <iostream>
