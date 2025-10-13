@@ -10,7 +10,11 @@
 
 #include <iostream>
 
-#define uint8_t unsigned char
+#define uint8_t unsigned int
+
+float The_INCH(uint8_t feet, uint8_t inch);
+float The_WEIGHT(uint8_t weight);
+float The_BMI(float meter, float pounds);
 
 int main(int argc, const char **argv)
 {
@@ -20,9 +24,65 @@ int main(int argc, const char **argv)
     uint8_t inch = 0;
     uint8_t weight = 0;
 
-    
+    float the_meter = 0.0f;
+    float the_pounds = 0.0f;
+    float the_bmi = 0.0f;
+
+    cout << "Enter your Height!" << endl;
+    cout << "Your feet:_\b";
+    cin >> feet;
+    cout << "Your inch:_\b";
+    cin >> inch;
+    cout << "Enter your Weight!" << endl;
+    cout << "Your weight:_\b";
+    cin >> weight;
+
+    the_meter = The_INCH(feet,inch);
+    the_pounds = The_WEIGHT(weight);
+    the_bmi = The_BMI(the_meter,the_pounds);
+
+    cout << "Your BMI is " << the_bmi << " ." << endl;
 
     return EXIT_SUCCESS;
 }
 
+float The_INCH(uint8_t feet, uint8_t inch)
+{
+    using namespace std;
 
+    const uint8_t Feet_Inch_num = 12;
+    const float Inch_Meter_num = 0.0254f;
+    uint8_t the_inch;
+    float the_meter;
+
+    the_inch = feet * Feet_Inch_num + inch;
+    the_meter = the_inch * Inch_Meter_num;
+
+    cout << "You are " << the_inch << " inch tall \n";
+    cout << "or " << the_meter << " meter tall.\n";
+
+    return the_meter;
+}
+
+float The_WEIGHT(uint8_t weight)
+{
+    using namespace std;
+
+    const float weight_num = 2.2f;
+    float the_weight;
+
+    the_weight = weight / weight_num;
+
+    cout << "You are " << the_weight << " kilogram.\n";
+
+    return the_weight;
+}
+
+float The_BMI(float meter, float pounds)
+{
+    float the_bmi;
+
+    the_bmi = pounds / (meter * meter);
+
+    return the_bmi;
+}
