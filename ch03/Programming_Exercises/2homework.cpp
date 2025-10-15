@@ -10,19 +10,19 @@
 
 #include <iostream>
 
-#define uint8_t unsigned int
+#define uint32_t unsigned int
 
-float The_INCH(uint8_t feet, uint8_t inch);
-float The_WEIGHT(uint8_t weight);
+float The_INCH(uint32_t feet, uint32_t inch);
+float The_WEIGHT(uint32_t weight);
 float The_BMI(float meter, float pounds);
 
 int main(int argc, const char **argv)
 {
     using namespace std;
 
-    uint8_t feet = 0;
-    uint8_t inch = 0;
-    uint8_t weight = 0;
+    uint32_t feet = 0;
+    uint32_t inch = 0;
+    uint32_t weight = 0;
 
     float the_meter = 0.0f;
     float the_pounds = 0.0f;
@@ -46,13 +46,13 @@ int main(int argc, const char **argv)
     return EXIT_SUCCESS;
 }
 
-float The_INCH(uint8_t feet, uint8_t inch)
+float The_INCH(uint32_t feet, uint32_t inch)
 {
     using namespace std;
 
-    const uint8_t Feet_Inch_num = 12;
+    const uint32_t Feet_Inch_num = 12;
     const float Inch_Meter_num = 0.0254f;
-    uint8_t the_inch;
+    uint32_t the_inch;
     float the_meter;
 
     the_inch = feet * Feet_Inch_num + inch;
@@ -64,7 +64,7 @@ float The_INCH(uint8_t feet, uint8_t inch)
     return the_meter;
 }
 
-float The_WEIGHT(uint8_t weight)
+float The_WEIGHT(uint32_t weight)
 {
     using namespace std;
 

@@ -14,13 +14,41 @@ Finally, enter the seconds of arc: 19
 
 #include <iostream>
 
-
+void Get_Latitude(void);
 
 int main(int argc, const char **argv)
 {
     using namespace std;
 
-
+    Get_Latitude();
 
     return EXIT_SUCCESS;
+}
+
+void Get_Latitude(void)
+{
+    using namespace std;
+
+    const int riato = 60;
+
+    int degrees;
+    int minutes;
+    int seconds;
+    double latitude;
+
+    cout << "Enter a latitude in degrees, minutes, and seconds:" << endl;
+    cout << "First, enter the degrees: ";
+    cin >> degrees;
+    cout << "Next, enter the minutes of arc: ";
+    cin >> minutes;
+    cout << "Finally, enter the seconds of arc: ";
+    cin >> seconds;
+
+    latitude = (double)degrees + (double)minutes / riato + (double)seconds / (riato * riato);
+
+    cout << degrees << " degrees, "
+         << minutes << " minutes, "    
+         << seconds << " seconds = " 
+         << latitude << " degrees\n";
+
 }
