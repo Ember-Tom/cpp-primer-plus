@@ -1,4 +1,4 @@
-// ptr_str.cpp -- using pointers to string
+// ptr_str.cpp -- using pointers to strings
 
 #include <iostream>
 // declare strlen(), strcpy()
@@ -38,7 +38,7 @@ int main(int argc, const char **argv)
     // get new storage
     ps = new char[strlen(animal) + 1];
     // copy string to new storage
-    strcpy(ps,animal);
+    strcpy(ps, animal);
 
     cout << "After using strcpy():\n";
     cout << animal << " at " << (int *) animal << endl;
