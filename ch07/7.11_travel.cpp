@@ -51,5 +51,5 @@ void show_time(travel_time t)
 {
     using namespace std;
 
-    cout << t.hours << " hours, " << t.mins << " minutes\n";
+    cout << t.hours << " hours, " << t.mins << " minutes\n"; 
 }
