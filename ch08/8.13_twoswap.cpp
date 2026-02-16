@@ -15,7 +15,7 @@ struct JOB
 // explicit specialization
 template <> void Swap<JOB>(JOB &j1, JOB &j2);
 
-void Swap_t(JOB *j1, JOB *j2);
+void My_Swap(JOB *j1, JOB *j2);
 void Show(JOB &j);
 
 int main(int argc, const char **argv)
@@ -44,7 +44,7 @@ int main(int argc, const char **argv)
     Show(sue);
     Show(sidney);
 
-    Swap_t(&sue,&sidney);
+    My_Swap(&sue,&sidney);
     cout << "My thinking:\n";
     Show(sue);
     Show(sidney);
@@ -77,7 +77,7 @@ template <> void Swap<JOB>(JOB &j1, JOB &j2)
     j2.floor = t2;
 }
 
-void Swap_t(JOB *j1, JOB *j2)
+void My_Swap(JOB *j1, JOB *j2)
 {
     double t1;
     int t2;
