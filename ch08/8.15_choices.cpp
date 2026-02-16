@@ -27,7 +27,7 @@ int main(int argc, const char **argv)
     cout << lesser(m, n) << endl;       // use #2
     cout << lesser(x, y) << endl;       // use #1 with double
     cout << lesser<>(m, n) << endl;     // use #1 with int
-    cout << lesser<int>(m, n) << endl;  // use #1 with int
+    cout << lesser<int>(x, y) << endl;  // use #1 with int
 
     return EXIT_SUCCESS;
 }
