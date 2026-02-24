@@ -4,17 +4,32 @@
 
 void oil(int x);
 
+int texas = 666;
+static int year = 2025;
+
 int main(int argc, const char **argv)
 {
     using namespace std;
-
-    int texas = 31;
-    int year = 2011;
 
     cout << "In main(), texas = " << texas << ", &texas = ";
     cout << &texas << endl;
     cout << "In main(), year = " << year << ", &year = ";
     cout << &year << endl;
+
+    {
+        cout << "In main(), texas = " << texas << ", &texas = ";
+        cout << &texas << endl;
+        cout << "In main(), year = " << year << ", &year = ";
+        cout << &year << endl;
+
+        int texas = 31;
+        int year = 2011;
+
+        cout << "In main(), texas = " << texas << ", &texas = ";
+        cout << &texas << endl;
+        cout << "In main(), year = " << year << ", &year = ";
+        cout << &year << endl;
+    }
 
     oil(texas);
 
@@ -49,3 +64,5 @@ void oil(int x)
     cout << "Post-block texas = " << texas;
     cout << ", &texas = " << &texas << endl;
 }
+
+// 作用域
